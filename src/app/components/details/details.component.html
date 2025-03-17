@@ -1,1 +1,16 @@
-<p>details works!</p>
+<div id="main" *ngIf="pokemonDetails; else loading">
+  <div class="card">
+    <h2>{{ pokemonDetails.name | titlecase }}</h2>
+    <img [src]="pokemonDetails.sprites.front_default" alt="{{ pokemonDetails.name }}" />
+    <p><strong>ID:</strong> {{ pokemonDetails.id }}</p>
+    <p><strong>Tipo(s):</strong> {{ pokemonTypes.join(', ') }}</p>
+    <p><strong>Habilidades:</strong> {{ pokemonAbilities.join(', ') }}</p>
+  </div>
+
+
+
+</div>
+
+<ng-template #loading>
+  <p>Cargando detalles del Pokémon...</p>
+</ng-template>

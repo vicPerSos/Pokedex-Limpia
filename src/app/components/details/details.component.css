@@ -1,0 +1,22 @@
+#main{
+    height: calc(100vh - 120px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333333;
+    color: white;
+}
+#main>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1b1b1b;
+    color: white;
+    padding: 5px;
+}
+#main>div>img{
+    min-height: 300px;
+}

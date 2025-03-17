@@ -4,8 +4,8 @@ import { Observable } from 'rxjs';
 export interface Pokemon {
   name: string;
   url: string;
-  id: number; 
-  
+  id: number;
+
 }
 
 @Injectable({
@@ -25,8 +25,13 @@ export class PokemonService {
     return data.results.map((result: any) => {
       const urlParts = result.url.split('/');
       const id = parseInt(urlParts[urlParts.length - 2], 10); // Extraemos el ID
-      return { ...result, id }; 
-      
+      return { ...result, id };
+
     });
   }
+
+  getPokemonById(id: string): Observable<any> {
+    return this._httpClient.get(`${this._urlBase}/${id}`);
+  }
+
 }
