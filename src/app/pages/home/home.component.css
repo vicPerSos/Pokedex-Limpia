@@ -8,6 +8,14 @@
     align-items: center;
 }
 
-app-buscador {
-    margin-top: 20px;
-}
+.btn-primary {
+    background-color: #c74512;
+    border: 2px solid #782f12;
+    color: whitesmoke;
+    margin-bottom: 10px;
+  }
+  
+  .btn-primary:hover {
+    background-color: #a83d12;
+    border-color: #5e260e;
+  }
